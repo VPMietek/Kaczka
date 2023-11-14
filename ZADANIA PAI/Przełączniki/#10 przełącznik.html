@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Przełącznik</title>
+
+
+	</head>
+	<body>
+		<script>
+            function wybor() {
+				if(wybor1 = 2){
+					document.getElementById('pole3').innerHTML = ("Oddychasz hahaha")
+
+                let wybor1 = document.getElementById("wybor1").value;
+				let wybor2 = document.getElementById("wybor2").value;
+				document.getElementById('pole').innerHTML = wybor1
+				document.getElementById('pole2').innerHTML = wybor2
+
+            }
+		}
+        </script>
+
+		<select id="wybor1">
+			<option	id="1">Woda</option>
+			<option id="2">Powietrze</option>
+			<option>Szkło</option>
+			<option>Próżnia</option>
+		</select></br>
+		<select id="wybor2">
+			<option>Woda</option>
+			<option>Powietrze</option>
+			<option>Szkło</option>
+			<option>Próżnia</option>
+		</select>
+		
+			<header>
+
+
+
+                <button onclick="wybor()">Wybierz</button></br>
+				<p id="pole">...</p></br>
+				<p id="pole2">...</p></br>
+				<p id="pole3">...</p></br>
+            </header>
+
+		
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie PAI</title>
+</head>
+<body>
+    <button id="ustawianietekstu">Ustaw tekst na pasku stanu</button>
+    <button id="czyszczenietekstu">Wyczyść tekst na pasku stanu</button>
+    <button id="sprawdzanieokna">Sprawdź stan okna</button>
+    <script> 
+    function okno(){
+        const sprawdzanieokna = document.getElementById('sprawdzanieokna');
+        
+        sprawdzanieokna.okno()('click', () => { 
+            if (window.closed) {
+                alert('Okno zostało zamknięte.');
+            } else {
+                alert('Okno jest otwarte.');
+            }
+        })};
+    </script>
+<div id="statuspaska" style="background-color: #0077b6; color: white; text-align: center; padding: 10px;">
+    
+</div>
+
+<script>
+    const ustawianietekstu = document.getElementById('ustawianietekstu');
+    const czyszczenietekstu = document.getElementById('czyszczenietekstu');
+    const statuspaska = document.getElementById('statuspaska');
+
+    ustawianietekstu.addEventListener('click', () => {
+        const customStatusText = 'Zadanie PAI';
+        statuspaska.textContent = ' ' + customStatusText;
+    });
+
+    czyszczenietekstu.addEventListener('click', () => {
+        statuspaska.textContent = '';
+    });
+</script>
+    
+</body>
+</html>

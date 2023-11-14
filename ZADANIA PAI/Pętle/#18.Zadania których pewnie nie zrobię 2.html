@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>#18 Zadanie których pewnie nie zrobie2</title>
+	</head>
+    <button onclick="Oblicz()">Sprawdź</button></br>
+    <input placeholder="Podaj X" type="text" id="x1"></br>
+    <input placeholder="Podaj Y" type="text" id="y1"></br>
+    <input placeholder="Podaj Z" type="text" id="z1" min="0,1"></br>
+	<body>
+        <script>
+            function Oblicz(){
+                let x1 = document.getElementById("x1").value*1;
+                let y1 = document.getElementById("y1").value*1;
+                let z1 = document.getElementById("z1").value*1;
+                if (z1 == 0){
+                    document.getElementById("p1").innerHTML = "Panie kto pana matematyki uczył";
+                }
+                else{
+                document.getElementById("p1").innerHTML = ((x1 + y1)/z1)
+                }
+            }
+        </script>
+        
+        <p id="p1">...</p>
+	</body>
+</html>

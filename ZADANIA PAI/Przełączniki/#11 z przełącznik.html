@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Przełącznik</title>
+
+
+	</head>
+	<body>
+		<script>
+            function wybor() {
+			
+
+                let wybor1 = document.getElementById("wybor1").value;
+				let wybor2 = document.getElementById("wybor2").value;
+
+                switch(wybor1){
+                    case "Woda": tekst1 ="Woda pokrywa ponad około 71% powierzchni ziemi";
+                            break;
+                    case "Powietrze": tekst1 ="Każdy człowiek oddycha powietrzem";
+                            break;
+                    case "Szkło": tekst1 ="Odbijasz się odemnie?";
+                    break;
+                    case "Próżnia": tekst1 ="Tam sobie nie pooddychasz";
+                    break;
+                    
+                }
+
+
+                switch(wybor2){
+                    case "Woda": tekst2 ="Ciepło napij się wody";
+                            break;
+                    case "Powietrze": tekst2 ="Oddycham haahahhaahah";
+                            break;
+                    case "Szkło": tekst2 ="Szklana połapka";
+                    break;
+                    case "Próżnia": tekst2 ="Star Wars pju pju";
+                    break;
+                    
+                }
+
+				document.getElementById('pole').innerHTML = tekst1;
+				document.getElementById('pole2').innerHTML = tekst2;
+                
+
+		}
+        </script>
+
+		<select id="wybor1">
+			<option	id="1">Woda</option>
+			<option id="2">Powietrze</option>
+			<option>Szkło</option>
+			<option>Próżnia</option>
+		</select></br>
+		<select id="wybor2">
+			<option>Woda</option>
+			<option>Powietrze</option>
+			<option>Szkło</option>
+			<option>Próżnia</option>
+		</select>
+		
+			<header>
+
+
+
+                <button onclick="wybor()">Wybierz</button></br>
+				<p id="pole">...</p></br>
+				<p id="pole2">...</p></br>
+            </header>
+
+		
+	</body>
+</html>

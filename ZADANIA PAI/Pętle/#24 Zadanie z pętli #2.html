@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>#16 zastanawiam się nad sensem życia</title>
+        <input type="text" id="liczba" min="1">
+    <button onclick="liczba2()">Wyświetl</button></br>
+
+    
+    <p id="wynik">0</p>
+	</head>
+	<body>
+        
+        <script>
+            function liczba2(){
+                let liczba = document.getElementById("liczba").value *1; 
+                document.getElementById("liczba").value = "";
+                if(liczba == 0 ){return} 
+                let wynik = document.getElementById("wynik").innerHTML *1;
+                wynik = liczba + wynik
+                document.getElementById("wynik").innerHTML = wynik;
+    
+            }
+        </script>
+
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #1d0202;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #70e90d;
+        }
+    </style>
+</head>
+<body>
+<center> <h1>Działająca Tabela</h1></center>
+
+    <div id="kontenertabeli" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Lp.</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Wiek</th>
+                </tr>
+            </thead>
+            <tbody id="ludziska">
+            </tbody>
+        </table>
+    </div>
+
+    <button id="DANEPRZYCISK">Dodaj Dane</button>
+
+    <script>
+        
+        const danes = [];
+
+        
+        function coscosmadzialac() {
+            const kontenertabeli = document.getElementById("kontenertabeli");
+            const ludziska = document.getElementById("ludziska");
+
+            ludziska.innerHTML = ""; 
+
+            for (let i = 0; i < danes.length; i++) {
+                const ludzie = danes[i];
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${ludzie.imie}</td>
+                    <td>${ludzie.nazwisko}</td>
+                    <td>${ludzie.wiek}</td>
+                `;
+                ludziska.appendChild(row);
+            }
+
+            
+            kontenertabeli.style.display = "block";
+        }
+
+        
+        const DANEPRZYCISK = document.getElementById("DANEPRZYCISK");
+        DANEPRZYCISK.addEventListener("click", () => {
+
+            const imie = prompt("Podaj imię:");
+            const nazwisko = prompt("Podaj nazwisko:");
+            const wiek = prompt("Podaj wiek:");
+
+            danes.push({ imie, nazwisko, wiek });
+
+            
+            coscosmadzialac();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>...</title>
+        <button onclick="Oblicz()">Oblicz</button></br>
+        <input placeholder="Podaj X" type="text" id="x"></br>
+	</head>
+	<body>
+        <script>
+            function Oblicz(){
+                document.getElementById("1").innerHTML = "X = "
+                let x = document.getElementById("x").value*1;
+               if(x == 0){
+                document.getElementById("1").innerHTML = "Popraw X";
+               } 
+               else{
+                document.getElementById("1").innerHTML = ((Math.sqrt(x+1))/(Math.cos(x)))
+               }
+            }
+        </script>
+        <p id="1">X = </p>
+
+	</body>
+</html>

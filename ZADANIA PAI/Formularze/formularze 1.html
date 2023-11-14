@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze 1</title>
+</head>
+<body>
+    <form action="" method="" name="strona">
+        <H4>Dane osobowe</H4></br>
+    </br>
+        Imię: <input type="text" name="imie"></br>
+    </br>
+        Nazwisko: <input  type="text" name="nazwisko"></br>
+    </br>
+        Email: <input  type="email" name="email"></br>
+    </br>
+        Data Urodzin: <input type="date" name="dataurodzin"></br>
+    </br>
+        Pesel: <input type="number" name="pesel"></br>
+    </br>
+        <input type="button" onclick="wykonaj()" name="wyslij" value="Wyślij"></br>
+    </form>
+    <script>
+        
+            function wykonaj() {
+            let imie = document.strona.imie.value;
+            let email = document.strona.email.value;
+            imie = imie.toLowerCase();
+            imie = imie[0].toUpperCase() + imie.substr(1)
+            document.strona.imie.value = imie
+            if(document.strona.imie.value.length < 3){
+            (alert("Popraw Imię"))
+            }
+            if(document.strona.nazwisko.value.length < 2){
+            (alert("Popraw Nazwisko"))
+            }
+            if(document.strona.pesel.value.length != 11){
+            (alert("Popraw Pesel"))
+            }
+            if(email.indexOf('@') < 0 || email.indexOf('.') <0){
+                alert("Popraw E-Mail")
+            }
+
+            }
+        
+        
+    </script>
+</body>
+</html>

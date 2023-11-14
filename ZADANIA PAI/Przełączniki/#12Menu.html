@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Menu</title>
+
+
+	</head>
+	<body>
+
+
+        
+
+		<script>
+            document.getElementById('pole').innerHTML = tekst1;
+            function menu() {
+                let dania2 = document.getElementById('dania2').value;
+		
+        switch(dania2){
+            case "1.alubec": tekst1 ="Wybrałeś alubec";
+            document.getElementById('pole').innerHTML = tekst1;
+        }
+
+
+				
+		}
+        </script>	
+        
+        
+        <div id="dania2">
+            <h4 id="1">1.alubec</h4>
+            <h4 id="2">2.iktewerk</h4>
+            <h4 id="3">3.Ramoh</h4>
+            <h4 id="4">4.Kar</h4>
+        </div>
+			<header>
+                <input placeholder="Wybierz numer" type="text" id="wybor"></br>
+                <button onclick="menu()">OK</button></br>
+                <p id="pole">...</p></br>
+            </header>
+
+		
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <title>7 instrukje </title>
+    <h3>Pole trapezu </h3>
+</head>
+
+<header>
+<script>
+    function trapez(){
+        let a = document.getElementById("a").value*1;
+        let b = document.getElementById("b").value*1;
+        let h = document.getElementById("h").value*1;
+
+
+        if(a>0 && b>0 && h>0){
+            document.getElementById('o').innerHTML= "P =" +(((a+b)*h)/2)
+        }
+        if(a>0){
+        }
+        else{
+            document.getElementById('o').innerHTML= "Błędne A"
+        }
+
+        if(b>0){
+        }
+        else{
+            document.getElementById('o').innerHTML= "Błędne B"
+        }
+
+        if(h>0){
+        }
+        else{
+            document.getElementById('o').innerHTML= "Błędne H"
+        }
+
+    }
+</script>
+
+</header>
+
+
+    
+<body>
+    <input placeholder="Podaj A" type="text" id="a"></br>
+    <input placeholder="Podaj B" type="text" id="b"></br>
+    <input placeholder="Podaj H" type="text" id="h"></br>
+    <button onclick="trapez()">Oblicz</button></br>
+    <p id="o">P = </p>
+
+</body>
+
+</html>

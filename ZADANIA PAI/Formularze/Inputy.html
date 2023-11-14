@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input </title>
+</head>
+<body>
+    <form action="" method="" name="form1">
+        imię: <input type="text" name="imie"></br>
+
+        <textarea name="tresc" rows="5" cols="50">Fragment Textu</textarea></br>
+        hasło:  <input type="password" name="haslo" value=""></br>
+        <input type="radio" name="odp1" value="Tak">Tak</br>
+        <input type="radio" name="odp1" value="Nie">Nie</br>
+        <input type="radio" name="odp1" value="Niewiem">Nie Wiem</br>
+
+
+        <input type="radio" name="odp2" value="Ale">Ale</br>
+        <input type="radio" name="odp2" value="Jo">Jo</br>
+        <input type="radio" name="odp2" value="Niechciol">Nie chcuioł</br>
+
+
+        <input type="checkbox" name="" value="sport" checked>Sport</br>
+        <input type="checkbox" name="" value="ksiazki" checked>ksiazki</br>
+        <input type="checkbox" name="" value="komputery" checked>komputery</br>
+        <select name="jezyk" size="2"></br>
+            <option>Polski</option>
+            <option>Angielski</option>
+            <option>Niemiecki</option>
+            <option>Francuski</option>
+        </select>
+        <input type="hidden" name="id" value="123"></br>
+        <input type="color" name="kolor" value="#ffffff"></br>
+        <input type="button" onclick="wykonaj()" name="wyslij" value="Wyślij">
+        <input type="reset" name="resest" value="Reset"></br>
+    </form>
+    <script>
+        function wykonaj() {
+            if(document.form1.imie.value.length < 3)
+            (alert("Popraw Imię"))
+        }
+        
+    </script>
+</body>
+</html>

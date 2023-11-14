@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <title>#5 instrukje </title>
+    <h3>Pole prostokąta </h3>
+    <!--                Wzor 1                        -->
+    <script>
+        function wzor1(){
+           let a = document.getElementById("a").value*1;
+           let b = document.getElementById("b").value*1;
+
+            if(a>0 && b>0){
+                document.getElementById('c').innerHTML= "P = " +(a*b)
+            }
+            else{
+                document.getElementById('c').innerHTML= "Panie a kto to Panu tak spie......"
+            }
+
+        }
+    </script>
+
+<header>
+        <!--                Wzor 1                        -->
+        <input placeholder="Podaj A" type="text" id="a"></br>
+        <input placeholder="Podaj B" type="text" id="b"></br>
+        <button onclick="wzor1()">Oblicz</button></br>
+        <p id="c">P = </p>
+</header>
+
+
+    
+<body></body>
+
+</html>

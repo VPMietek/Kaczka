@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2>Zmień tekst</h2>
+    
+</head>
+<body>
+
+    <p id="a">Pora roku: Jesień jest jednocześnie smutna i kolorowa</p>
+    <button onclick="zmianatekstu()">Zmień tekst</button>
+
+    <script>
+        let Poraroku = "wiosna";
+
+        function zmianatekstu(){
+            if (Poraroku === "wiosna") {
+                document.getElementById("a").innerHTML = "Pora roku: Wiosna miło🤩";
+                Poraroku = "lato";
+            } else if (Poraroku === "lato") {
+                document.getElementById("a").innerHTML = "Pora roku: Lato😎";
+                Poraroku = "jesien";
+            } else if (Poraroku === "jesien") {
+                document.getElementById("a").innerHTML = "Pora roku: Jesień jest jednocześnie smutna i kolorowa😭";
+                Poraroku = "zima";
+            } else if (Poraroku === "zima") {
+                document.getElementById("a").innerHTML = "Pora roku: Zima jest wszędzie biało mażenie niektórych😴";
+                Poraroku = "wiosna";
+            }
+        }
+    </script>
+
+</body>
+</html>

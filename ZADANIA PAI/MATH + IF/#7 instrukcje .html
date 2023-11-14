@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <title>7 instrukje </title>
+    <h3>Pole trapezu </h3>
+
+<header>
+    <script>
+    function wzor1(){
+       let a = document.getElementById("a").value*1;
+       let b = document.getElementById("b").value*1;
+       let c = document.getElementById("c").value*1;
+       let p = (a + b + c)/2
+
+        if(a>0 && b>0 && c>0){
+            if(a + b > c && b + c > a && a + c > b){
+                document.getElementById('o').innerHTML= "P = " +(Math.sqrt(p*(p-a)*(p-b)*(p-c)))
+            }
+            else{
+                document.getElementById('o').innerHTML="Nie ma takiego trójkąta"
+            }
+        }
+
+        else{
+            document.getElementById('o').innerHTML= "Panie a kto to Panu tak .........."
+        }
+
+    }
+</script>
+
+</header>
+
+
+    
+<body>
+    <input placeholder="Podaj A" type="text" id="a"></br>
+    <input placeholder="Podaj B" type="text" id="b"></br>
+    <input placeholder="Podaj C" type="text" id="c"></br>
+    <button onclick="wzor1()">Oblicz</button></br>
+    <p id="o">P = </p>
+
+</body>
+
+</html>

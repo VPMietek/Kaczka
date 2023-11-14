@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 1B</title>
+</head>
+<body>
+    
+
+   <center> <button id="opcja1">Opcja 1</button></br></center>
+</br>
+<center><button id="opcja2">Opcja 2</button></br></center>
+</br>
+<center> <button id="opcja3">Opcja 3</button></br></center>
+
+    <div id="wyniki">
+    </div>
+
+    <script>
+      
+        function opcja1(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+       
+        document.getElementById("opcja1").addEventListener("click", () => {
+            const wyniki = [];
+
+            
+            for (let i = 0; i < 5; i++) {
+                const losowaLiczba = Math.random(); 
+                wyniki.push(losowaLiczba);
+            }
+
+            document.getElementById("wyniki").textContent = "Wyniki: " + wyniki;
+        });
+
+        
+        document.getElementById("opcja2").addEventListener("click", () => {
+            const wyniki = [];
+
+           
+            for (let i = 0; i < 4; i++) {
+                const losowaLiczba = opcja1(0, 10);
+                wyniki.push(losowaLiczba);
+            }
+
+            document.getElementById("wyniki").textContent = "Wynik: " + wyniki;
+        });
+
+       
+        document.getElementById("opcja3").addEventListener("click", () => {
+            const wyniki = [];
+
+            
+            for (let i = 0; i < 10; i++) {
+                const losowaLiczba = opcja1(5, 100);
+                wyniki.push(losowaLiczba);
+            }
+
+            document.getElementById("wyniki").textContent = "Wyniki: " + wyniki;
+        });
+    </script>
+</body>
+</html>

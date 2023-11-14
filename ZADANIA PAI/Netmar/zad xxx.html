@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>"Wpisz cokolwiek bo widzisz jak to wygląda" - Piotr Depta</title>
+    <style>
+         .tab {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            transition: background-image 1s ease;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+        #exampleDiv {
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #elapsedTimeContainer {
+            text-align: center; /* Wyśrodkuj tekst */
+            padding: 20px; /* Dodaj wypełnienie */
+            background-color: rgba(209, 1, 1, 0.5); /* Dodaj tło z przezroczystością */
+            border-radius: 10px;
+            position: absolute;
+            top: 20px; /* Umieść na górze strony */
+            left: 92%; /* Wyśrodkuj poziomo */
+            transform: translateX(-50%); /* Skoryguj położenie poziome */
+        }
+        #elapsedTime {
+            font-size: 24px; /* Zwiększ rozmiar czcionki */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <button class="tab" data-text="UFO 1">Tekst 1</button>
+        <button class="tab" data-text="UFO 2">Tekst 2</button>
+        <button class="tab" data-text="UFO 3">Tekst 3</button>
+    </div>
+
+    <div id="exampleDiv">
+        <p>Cześć obca cywilizacjo!</p>
+    </div>
+
+    <button id="changeTextButton">Zmień tekst</button>
+    <button id="goBackButton">Cofnij</button>
+
+    <h1>Piotrek mówił by wpisać cokolwiek więc wpisałem - Kuba.</h1>
+    <p>Następuje najazd UFO na świat.</p>
+    
+    <div id="exampleDiv">
+        <p>Cześć obca cywilizacjo!</p>
+    </div>
+
+
+    <h2>Aktualny adres URL:</h2>
+    <p id="currentURL"></p>
+
+    <h2>Informacje o ekranie:</h2>
+    <p id="screenInfo"></p>
+
+    <h2>Wpisz imię:</h2>
+    <input type="text" id="nameInput" placeholder="Wpisz imię">
+    <button id="addNameButton">Dodaj imię</button>
+    
+    <h2>Lista imion:</h2>
+    <ul id="nameList"></ul>
+
+    <button id="sourceLinkButton">Źródło Zdjęć</button>
+
+    <div id="elapsedTimeContainer">
+        <h2>Spędzony czas na stronie:</h2>
+        <p id="elapsedTime">0 sekund</p>
+    </div>
+
+    <script>
+        let elapsedSeconds = 0;
+        const elapsedTimeElement = window.document.querySelector('#elapsedTime');
+
+        const timer = setInterval(() => {
+            elapsedSeconds++;
+            elapsedTimeElement.textContent = `${elapsedSeconds} sekund`;
+        }, 1000);
+
+        const pageTitle = window.document.title; //Tworzy stałą która zapisuje tytuł strony.
+        const mainHeading = window.document.querySelector('h1'); //Zwraca pierwszy pasujący element, lub null , gdy nic nie znajdzie.
+        const exampleParagraph = window.document.querySelector('p');
+        const exampleDiv = window.document.querySelector('#exampleDiv');
+        const changeTextButton = window.document.querySelector('#changeTextButton'); 
+        const currentURL = window.document.querySelector('#currentURL');
+        const goBackButton = window.document.querySelector('#goBackButton'); 
+        const screenInfo = window.document.querySelector('#screenInfo');
+        const nameInput = window.document.querySelector('#nameInput');
+        const addNameButton = window.document.querySelector('#addNameButton');
+        const nameList = window.document.querySelector('#nameList');
+        const sourceLinkButton = window.document.querySelector('#sourceLinkButton');
+        //Metoda querySelector() zwraca pierwszy pasujący element, lub null , gdy nic nie znajdzie
+        changeTextButton.addEventListener('click', () => {
+            pageTitle.textContent = 'Średniawki.pl';
+            mainHeading.textContent = 'UFO 1';
+            exampleParagraph.textContent = 'UFO 2';
+            exampleDiv.innerHTML = '<p>UFO 3</p>';
+        });
+
+        currentURL.textContent = window.location.href; //Pokaż to oznacza to że komputer pobiera dokładne dane z kąd jest plik 
+
+        goBackButton.addEventListener('click', () => {      //Odpowiada za przycisk powrotu dokładnie window.history pozwala na zarządzanie historią przeglądania na samym końcu są jeszcze odnoścniki.
+            window.history.back();
+        });
+
+        screenInfo.textContent = `Rozdzielczość ekranu: ${window.screen.width}x${window.screen.height}`; //To pokazać zwraca na stronie rozdzielczość ekranu 
+
+        addNameButton.addEventListener('click', () => {
+            const name = nameInput.value;
+            if (name) {
+                const names = JSON.parse(window.localStorage.getItem('names')) || []; //To pokazać i przedstawić jako działanie skryptu który zapisuje imiona w lokalnej pamieci przeglądarki
+                names.push(name);
+                window.localStorage.setItem('names', JSON.stringify(names));
+                nameInput.value = '';
+                refreshNameList();
+            }
+        });
+
+        function refreshNameList() {
+            const names = JSON.parse(window.localStorage.getItem('names')) || []; //tworzy lokalny magazyn z imionami
+            nameList.innerHTML = ''; //Wpisane imiona są wypisywane na stronie. 
+            names.forEach(name => {
+                const listItem = window.document.createElement('li'); //Prezentuje to dokument który jest na stroni li oznacza element listy 
+                listItem.textContent = name;
+                nameList.appendChild(listItem);
+            });
+
+            setTimeout(refreshNameList, 2000);
+        }
+
+        refreshNameList();
+
+        sourceLinkButton.addEventListener('click', () => {
+            window.open('https://www.bing.com/create?toWww=1&redig=33558BFA7B3B48BCAA59CC8E6253AC00', '_blank');
+
+        });
+
+        const images = [
+            '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg',
+            '7.jpg', '8.jpg',
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = `url('images/${images[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 5000);
+        changeBackgroundImage();
+
+        function changeText(newText) {
+            exampleDiv.innerHTML = '<p>' + newText + '</p>';
+        }
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const text = tab.getAttribute('data-text');
+                changeText(text);
+            })})
+
+            goBackButton.addEventListener('click', () => {
+            window.localStorage.clear(); // Wyczyść dane w localStorage
+            window.sessionStorage.clear(); // Wyczyść dane w sessionStorage
+            window.location.reload(); // Przeładuj stronę
+            });
+        </script>
+</body>
+</html>

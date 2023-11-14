@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>#15 ZaDANIE</title>
+</head>
+<body>
+    <h1></h1>
+    <input type="text" id="liczba" min="1">
+    <button onclick="wyswietl()">Wyświetl</button>
+    <p id="wynik"></p>
+
+    <script>
+        function wyswietl() {
+            let liczba = document.getElementById("liczba").value;
+            let wynik = "";
+
+            for (let i = 1; i <= liczba; i *= 2) {
+                wynik += i + ", ";
+            }
+
+            
+            document.getElementById("wynik").innerHTML = wynik; //Pomysl Kudłacza
+        }
+    </script>
+</body>
+</html>

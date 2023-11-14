@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Średnia Arytmetyczna</title>
+
+  <script>
+    function srednia(){
+        let a =document.getElementById('a').value;
+        a=a*1
+        let b =document.getElementById('b').value;
+        b*=1
+        let c =document.getElementById('c').value;
+        c*=1
+        let d =document.getElementById('d').value;
+        d*=1
+
+
+        document.getElementById("średnia").value =(a+b+c+d)/4
+
+    }
+  </script>
+</head>
+<body>
+    a = <input value="0" type="text" id="a"><br />
+    b = <input value="0" type="text" id="b"><br />
+    c = <input value="0" type="text" id="c"><br />
+    d = <input value="0" type="text" id="d"><br />
+    <button onclick="srednia()">Oblicz</button><br />
+
+    średnia = <input id="średnia" type="text" ><br />
+  
+</body>
+</html>

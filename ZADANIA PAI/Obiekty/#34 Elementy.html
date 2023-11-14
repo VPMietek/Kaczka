@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34 Elementy 4 </title>
+</head>
+<body>
+    <script>
+        function uczen(){
+        this.imie = "Piotrek";
+        this.nazwisko = "Depta";
+        this.wiek = "18";
+        this.klasa = "4TIB";
+        this.sport = "Siatkówka";
+        this.wypisz = function(){
+            return this.imie + " " + this.nazwisko + "" + ", wiek:"
+            + this.wiek + this.klasa + " " + this.sport + " ";
+        }
+    }
+    document.write(this.wypisz)
+    </script>
+</body>
+</html>

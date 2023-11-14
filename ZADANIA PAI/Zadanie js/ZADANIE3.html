@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+</head>
+<body>
+    <div id="tablicaDane"></div> <!-- Dodaj pusty kontener, do którego wstawimy dane -->
+
+    <script>
+        const tablica = [5, 12, 17, 23, 123, 45, 54];
+        const tablicaDane = document.querySelector('#tablicaDane');
+        let dane = '';
+
+        for (let i = 0; i < tablica.length; i++) {
+            dane += tablica[i];
+            if (i < tablica.length - 1) {
+                dane += ', '; // Dodaj przecinek, jeśli to nie ostatni element tablicy
+            }
+        }
+
+        tablicaDane.textContent = dane; // Użyj textContent, aby wstawić dane do elementu
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>#17 blombal</title>
+	</head>
+    <button onclick="Sprawdzanie()">Sprawdź</button></br>
+    <input type="text" id="a"></br>
+    <script>
+        function Sprawdzanie(){
+            let a = document.getElementById("a").value;
+            if(a == ""){
+                document.getElementById("1").innerHTML = "False";
+            }
+            else{
+                document.getElementById("1").innerHTML = "True";
+            }
+            if(a > 0){
+                document.getElementById("2").innerHTML = "Promień jest poprawny";
+            }
+             else{
+                document.getElementById("2").innerHTML = "Promień jest nie poprawny";
+             }  
+            
+        }
+    </script>
+	<body>
+        <p id="1">...</p>
+        <p id="2">...</p>
+	</body>
+</html>

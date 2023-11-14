@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>...</title>
+        <button onclick="Oblicz()">Oblicz</button></br>
+        <input placeholder="Podaj X" type="text" id="x"></br>
+	</head>
+	<body>
+        <script>
+            function Oblicz(){
+                let x = document.getElementById("x").value*1;
+                if(x < -1){
+                    document.getElementById("1").innerHTML = x
+                }
+                else{
+                    if(-1 <= x <= 1){
+                    document.getElementById("1").innerHTML
+                    }
+                }
+            }
+        </script>
+        <p id="1">X = </p>
+
+	</body>
+</html>

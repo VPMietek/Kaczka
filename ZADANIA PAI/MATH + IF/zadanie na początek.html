@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma trzech liczb</title>
+
+    <script>
+        function obliczSuma3(){
+            let a = document.getElementById('a').value;
+            a=a*1;
+            let b = document.getElementById('b').value;
+            b*=1;
+            let c = document.getElementById('c').value;
+            c*=1;
+            
+            document.getElementById('wynik').innerHTML = 
+            'suma = '+(a+b+c);
+
+            document.getElementById('suma').value =a+b+c;
+        }
+    </script>
+   
+</head>
+<body>
+   <h1>Suma trzech liczb</h1>
+   a = <input value='0' type="text" id="a"><br /><br />
+   b = <input value='0' type="text" id="b"><br /><br />
+   c = <input value='0' type="text" id="c"><br /><br />
+
+
+
+   <button onclick="obliczSuma3()">Oblicz</button><br />
+   
+   <p id="wynik">...</p>
+</br>
+
+   suma = <input id="suma" type="text" ><br />
+    <header>
+        
+    
+    </header>
+
+   
+
+    <footer>
+       
+</body>
+</html>

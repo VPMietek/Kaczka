@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33 Elementy</title>
+</head>
+<body>
+    <script>
+        var pojazd = {
+            marka:  "Dodge",
+            model:  "Challenger",
+            rok_produkcji: "2023",
+            przebieg: "100",
+            wyswietldane: function(){
+                return this.marka + "" + this.model + " " + this.rok_produkcji + " " + this.przebieg + " ";
+
+                
+            }
+            
+        }
+        pojazd.numer_rej = "KMY_00044",
+        pojazd.wyswietlDetal = function(){
+            document.write(this.pojazd.numer_rej + "")
+        }
+        document.write(pojazd.wyswietldane());
+        document.write(pojazd.numer_rej)
+    </script>
+    
+</body>
+</html>

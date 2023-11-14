@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>...</title>
+	</head>
+	<body>
+<script>
+   function print(name = "Michał", status = "najlepszy") {
+    document.write(name + " jest " + status);
+}
+
+print(); //"Michał jest najlepszy"
+print("Karol"); //"Karol jest najlepszy"
+print("Paweł", "wysoki"); //"Paweł jest wysoki"
+print(undefined, "wysoki"); //"Michał jest wysoki" - undefined jest traktowane jak niepodanie wartośc 
+</script>
+		</div>
+	</body>
+</html>
+

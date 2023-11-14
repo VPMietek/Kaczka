@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <title>#4 Wzory </title>
+    <h3>Operacje na liczbach </h3>
+    <!--                Wzor 1                        -->
+    <script>
+        function wzor1(){
+           let a = document.getElementById("a").value*1;
+           let b =document.getElementById("b").value*1;
+
+            if(a>0 && b>0){
+                document.getElementById('c').innerHTML = + (a*b);   
+            }
+            if(a>0){
+            }
+            else{
+                document.getElementById('c').innerHTML= "Błędne A"
+            }
+            if(b>0){
+            }
+            else{
+                document.getElementById('c').innerHTML= "Błędne B"
+            }
+        }
+    </script>
+
+<!--                Wzor 2                        -->
+<script>
+    function wzor2(){
+       let U = document.getElementById("U").value*1;
+       let I =document.getElementById("I").value*1;
+       let t =document.getElementById("t").value*1;
+
+
+        if(U>0 && I>0 && t>0){
+                document.getElementById('W').innerHTML = + (U*I*t);   
+            }
+            if(U>0){
+            }
+            else{
+                document.getElementById('W').innerHTML= "Błędne U"
+            }
+            if(I>0){
+            }
+            else{
+                document.getElementById('W').innerHTML= "Błędne I"
+            }
+            if(t>0){
+            }
+            else{
+                document.getElementById('W').innerHTML= "Błędne t"
+            }
+
+    }
+</script>
+
+        <!--                Wzor 3                        -->
+<script>
+    function wzor3(){
+       let f = document.getElementById("f").value*1;
+        document.getElementById("w2").innerHTML = + (2*Math.PI*f);
+
+    }
+</script> 
+
+
+<!--                Wzor 4                        -->
+<script>
+    function wzor4(){
+       let x = document.getElementById("x").value*1;
+       let y = document.getElementById("y").value*1;
+        document.getElementById("d").innerHTML = + (x-y);
+
+    }
+</script> 
+
+<!--                Wzor 5                        -->
+<script>
+    function wzor5(){
+       let k = document.getElementById("k").value*1;
+       let t2 = document.getElementById("t2").value*1;
+        document.getElementById("m").innerHTML = ((k-t)/2);
+
+    }
+</script> 
+
+
+<!--                Wzor 6                        -->
+<script>
+    function wzor6(){
+       let a2 = document.getElementById("a2").value*1;
+       let b2 = document.getElementById("b2").value*1;
+       let h1 = document.getElementById("h1").value*1;
+        document.getElementById("P").innerHTML = (((a2+b2)*h1)/2);
+
+    }
+</script> 
+
+<!--                Wzor 7                        -->
+<script>
+    function wzor7(){
+       let t3 = document.getElementById("t3").value*1;
+       let s2 = document.getElementById("s2").value*1;
+        document.getElementById("s").innerHTML = (s2/t3);
+
+    }
+</script>
+
+
+
+<!--                Wzor 8 Koniec Świata 12.09.2023 16:49                       -->
+<script>
+    function wzor8(){
+       let p2 = document.getElementById("p2").value*1;
+       let c2 = document.getElementById("c2").value*1;
+       let m2 = document.getElementById("m2").value*1;
+        document.getElementById("e").innerHTML = ((p2*p2)*(c2*c2)+(m2*m2)*(c2*c2*c2*c2));
+
+    }
+</script>
+
+
+
+<!--                Wzor 9                        -->
+<script>
+    function wzor9(){
+       let a4 = document.getElementById("a4").value*1;
+       let b4 = document.getElementById("b4").value*1;
+       let c3 = document.getElementById("c3").value*1;
+       let r2 = document.getElementById("r2").value*1;
+        document.getElementById("p3").innerHTML = ((a4*b4*c3)/(r2*4));
+
+    }
+</script>
+
+
+<!--                Wzor 10                        -->
+<script>
+    function wzor10(){
+       let a5 = document.getElementById("a5").value*1;
+        document.getElementById("p4").innerHTML = ((Math.sqrt(3)*(a5*a5))/4);
+
+    }
+</script>
+    
+</head>
+<body>
+    <header>
+        <!--                Wzor 1                        -->
+        <input placeholder="Podaj A" type="text" id="a"></br>
+        <input placeholder="Podaj B" type="text" id="b"></br>
+        <button onclick="wzor1()">Oblicz</button></br>
+        <p id="c">Wynik c = a * b</p>
+        <!--                Wzor 2                        -->
+        <input placeholder="Podaj U" type="text" id="U"></br>
+        <input placeholder="Podaj I" type="text" id="I"></br>
+        <input placeholder="Podaj t" type="text" id="t"></br>
+        <button onclick="wzor2()">Oblicz</button></br>
+        <p id="W">Wynik W = U * I * t</p>
+        <!--                Wzor 3                        -->
+        <input placeholder="Podaj f" type="text" id="f"></br>
+        <button onclick="wzor3()">Oblicz</button></br>
+        <p id="w2">Wynik 2π * f</p>
+
+
+        <!--                Wzor 4                        -->
+        <input placeholder="Podaj X" type="text" id="x"></br>
+        <input placeholder="Podaj Y" type="text" id="y"></br>
+        <button onclick="wzor4()">Oblicz</button></br>    
+        <p id="d">Wynik d = y - x</p>   
+
+
+
+        <!--                Wzor 5                        -->
+        <input placeholder="Podaj K" type="text" id="k"></br>
+        <input placeholder="Podaj T" type="text" id="t2"></br>
+        <button onclick="wzor5()">Oblicz</button></br>    
+        <p id="m">Wynik m = (k-t) / 2</p> 
+
+        <!--                Wzor 6                        -->
+        <input placeholder="Podaj A" type="text" id="a2"></br>
+        <input placeholder="Podaj B" type="text" id="b2"></br>
+        <input placeholder="Podaj H" type="text" id="h1"></br>
+        <button onclick="wzor6()">Oblicz</button></br>    
+        <p id="P">Wynik P = (a+b)*h / 2</p> 
+
+
+
+        <!--                Wzor 7                        -->
+        <input placeholder="Podaj T" type="text" id="t3"></br>
+        <input placeholder="Podaj S" type="text" id="s2"></br>
+        <button onclick="wzor7()">Oblicz</button></br>    
+        <p id="s">Wynik S = s/t</p> 
+
+
+        <!--                Wzor 8                        -->
+        <input placeholder="Podaj p" type="text" id="p2"></br>
+        <input placeholder="Podaj m" type="text" id="m2"></br>
+        <input placeholder="Podaj c" type="text" id="c2"></br>
+        <button onclick="wzor8()">Oblicz</button></br>    
+        <p id="e">Wynik</p> 
+
+
+
+        <!--                Wzor 9                        -->
+        <input placeholder="Podaj a" type="text" id="a4"></br>
+        <input placeholder="Podaj b" type="text" id="b4"></br>
+        <input placeholder="Podaj c" type="text" id="c3"></br>
+        <input placeholder="Podaj R" type="text" id="r2"></br>
+        <button onclick="wzor9()">Oblicz</button></br>    
+        <p id="p3">Wynik (a*b*c)/(4*r)</p> 
+
+
+        <!--                Wzor 10                        -->
+        <input placeholder="Podaj A" type="text" id="a5"></br>
+        <button onclick="wzor10()">Oblicz</button></br>    
+        <p id="p4">Wynik </p> 
+    </header>
+    
+
+</body>
+</html>

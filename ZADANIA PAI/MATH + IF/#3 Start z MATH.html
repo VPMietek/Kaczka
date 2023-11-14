@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <title>#3Technik Programista </title>
+    <h3>Operacje na liczbach </h3>
+
+    <script>
+        function pierwsze(){
+        let a = document.getElementById("a").value*1;
+            document.getElementById("1").innerHTML = '1.Wypisana liczba:'   + (a);
+            document.getElementById("2").innerHTML = '2.Liczba o przeciwnym znaku:'    + (-a);
+            document.getElementById("3").innerHTML = '3.Wprowadzona liczba powiększona o 15:   ' + (15+a);
+            document.getElementById("4").innerHTML = '4.Wprowadzona liczba powiększona o 0,5:   ' + (a*0,5);
+            document.getElementById("5").innerHTML = '5.Kwadrat wprowadzonej liczby:   ' + (a*a);
+            document.getElementById("6").innerHTML = '6.Wartość jej dzielenia przez 2:   ' + (a/2);
+            document.getElementById("7").innerHTML = '7.Reszta z jej dzielenia przez 2:   ' + (a%2);
+            document.getElementById("8").innerHTML = '8.Liczba o jeden większa od wprowadzonej:   ' + (a+1);
+            document.getElementById("9").innerHTML = '9.Liczba o jeden mniejsza od wprowadzonej:   ' + (a-1);
+            document.getElementById("10").innerHTML = '10.Liczba zaokrąglona w dół powstała z podziału wprowadzonej liczby przez 3:   ' + (Math.floor(a/3));
+            document.getElementById("11").innerHTML = '11.Liczba zaokrąglona w górę powstała z podziału wprowadzonej liczby przez 3:   ' + (Math.ceil(a/3));
+            document.getElementById("12").innerHTML = '12.liczba zaokrąglona do najbliższej całkowitej powstałą z podziału wprowadzonej liczby przez 3  ' + (Math.round(a/3));
+            document.getElementById("13").innerHTML = '13.Pierwiastek z wprowadzonej liczby  ' + (Math.sqrt(a));
+            document.getElementById("14").innerHTML = '14.Wynik iloczynu wprowadzonej liczby z liczbą losową z przedziału 0-50  ' + (a*Math.floor(Math.random() * 51));
+            document.getElementById("15").innerHTML = '15.Wartość absolutną z wprowadzonej liczby  ' + (Math.abs(a));
+    }
+</script>
+
+
+
+    
+</head>
+<body>
+    <header>
+        
+    </header>
+    <1> <input placeholder="Podaj Liczbę" type="text" id="a"><br />
+    <button onclick="pierwsze()">Wprowadzona liczbę</button>
+    <p id="1">...</p>
+    <p id="2">...</p>
+    <p id="3">...</p>
+    <p id="4">...</p>
+    <p id="5">...</p>
+    <p id="6">...</p>
+    <p id="7">...</p>
+    <p id="8">...</p>
+    <p id="9">...</p>
+    <p id="10">...</p>
+    <p id="11">...</p>
+    <p id="12">...</p>
+    <p id="13">...</p>
+    <p id="14">...</p>
+    <p id="15">...</p>
+
+</body>
+</html>

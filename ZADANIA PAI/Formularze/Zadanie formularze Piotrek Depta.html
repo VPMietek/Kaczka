@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze 4</title>
+</head>
+<body>
+    <center><h2>Dane osoby, która w 2024 r. przystąpi do egzaminu maturalnego</h2></center>
+    <form action="" method="" name="zgłoszenie">
+    <h4>A1.Pesel: <input type="number" name="pesel"></br></h4>
+    <h4>A2.Nazwisko: <input  type="text" name="nazwisko"></h4>
+    <h4>A3.Nazwisko rodowe: <input  type="text" name="imierodowe"></h4>
+    <h4>A4.Imię (imiona): <input type="text" name="imie"></h4>
+    <h4>A5.Płeć <input type="radio" name="plec" value="Kobieta">Kobieta <input type="radio" name="plec" value="Mężczyzna">Mężczyzna</h4>
+    <h4>A6.Data urodzenia: <input type="date" name="dataurodzenia" value="2023-11-10" min="2004-01-01" max="2010-11-10"></h4>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h4>B 1.1 <input type="checkbox" name="szkola" value="a">Ukończę LO, technikum, branżową szkołę II stopnia lub szkołę artystyczną w 2024 r</h4>
+    <h4>B 1.2 <input type="checkbox" name="szkola" value="b">Ukończyłem(-łam) szkołę średnią przed rokiem 2024, tj. w roku <input type="number" name="rokszkoly"></h4>
+    <h4>B 1.3 <input type="checkbox" name="szkola" value="c">Jestem absolwentem oddziału międzynarodowego i posiadam dyplom IB. </h4>
+    <h4>B 2.1 <input type="checkbox" name="szkola2" value="d">W 2024 r. przystąpię do egzaminu maturalnego po raz pierwszy </h4>
+    <h4>B 2.2 <input type="checkbox" name="szkola2" value="e">Po raz pierwszy przystąpiłem(-łam) do egzaminu maturalnego w roku <input type="number" name="rokszkoly2">, ale nie uzyskałem(-łam) jeszcze świadectwa dojrzałości. </h4>
+    <h4>B 2.3 <input type="checkbox" name="szkola2" value="f">Po raz pierwszy przystąpiłem(-łam) do egzaminu maturalnego w roku <input type="number" name="rokszkoly3">i uzyskałem(-łam) już świadectwo dojrzałości.  </h4>
+    <h4>B 2.4 <input type="checkbox" name="szkola2" value="g">B2.4. W 2024 r. przystępuję ponownie do egzaminu maturalnego w całości, ponieważ (a) zmieniła się formuła, która mnie dotyczy, albo (b) minęło 5 lat od przystąpienia do egzaminu po raz pierwszy, w trakcie których nie zdałem(-łam) egzaminu maturalnego.</h4>
+    <input type="button" onclick="wykonaj()" name="wyslij" value="Wyślij"></br>
+    </form>
+    <script>
+  function wykonaj() {
+    let kobieta = document.zgłoszenie.plec[0].checked;
+    let mezczyzna = document.zgłoszenie.plec[1].checked;
+    let a = document.zgłoszenie.szkola[0].checked;
+    let b = document.zgłoszenie.szkola[1].checked;
+    let c = document.zgłoszenie.szkola[2].checked;
+    let d = document.zgłoszenie.szkola2[0].checked;
+    let e = document.zgłoszenie.szkola2[1].checked;
+    let f = document.zgłoszenie.szkola2[2].checked;
+    let g = document.zgłoszenie.szkola2[3].checked;
+
+
+
+    if (document.zgłoszenie.imie.value.length < 1) {
+        document.getElementById("1").innerHTML = "Popraw/Wpisz Imię";
+        setTimeout(function () {
+            document.getElementById("1").innerHTML = "";
+        }, 5000); 
+    }
+
+    if (document.zgłoszenie.nazwisko.value.length < 1) {
+        document.getElementById("2").innerHTML = "Popraw/Wpisz Nazwisko";
+        setTimeout(function () {
+            document.getElementById("2").innerHTML = "";
+        }, 5000);
+    }
+
+    if (document.zgłoszenie.pesel.value.length !== 9) {
+        document.getElementById("3").innerHTML = "Popraw/Wpisz Pesel";
+        setTimeout(function () {
+            document.getElementById("3").innerHTML = "";
+        }, 5000);
+    }
+
+    if (document.zgłoszenie.imierodowe.value.length < 1) {
+        document.getElementById("4").innerHTML = "Popraw Imię Rodowe";
+        setTimeout(function () {
+            document.getElementById("4").innerHTML = "";
+        }, 5000);
+    }
+
+    if (!kobieta && !mezczyzna) {
+        document.getElementById("5").innerHTML = "Wybierz Płeć";
+        setTimeout(function () {
+            document.getElementById("5").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly.value.length > 4) {
+        document.getElementById("6").innerHTML = "Popraw/Wpisz Rok 1.2";
+        setTimeout(function () {
+            document.getElementById("6").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly.value.length < 4) {
+        document.getElementById("6").innerHTML = "Popraw/Wpisz Rok 1.2";
+        setTimeout(function () {
+            document.getElementById("6").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly2.value.length > 4) {
+        document.getElementById("7").innerHTML = "Popraw/Wpisz Rok 2.2";
+        setTimeout(function () {
+            document.getElementById("7").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly2.value.length < 4) {
+        document.getElementById("7").innerHTML = "Popraw/Wpisz Rok 2.2";
+        setTimeout(function () {
+            document.getElementById("7").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly3.value.length > 4) {
+        document.getElementById("8").innerHTML = "Popraw/Wpisz Rok 2.3";
+        setTimeout(function () {
+            document.getElementById("8").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.rokszkoly3.value.length < 4) {
+        document.getElementById("8").innerHTML = "Popraw/Wpisz Rok 2.3";
+        setTimeout(function () {
+            document.getElementById("8").innerHTML = "";
+        }, 5000);
+    }
+    if (!a && !b && !c) {
+        document.getElementById("9").innerHTML = "Wybierz w punkcie 1.1-1.3";
+        setTimeout(function () {
+            document.getElementById("9").innerHTML = "";
+        }, 5000);
+    }
+    if (!d && !e && !f && !g) {
+        document.getElementById("10").innerHTML = "Wybierz w punkcie 2.1 - 2.4";
+        setTimeout(function () {
+            document.getElementById("10").innerHTML = "";
+        }, 5000);
+    }
+}
+
+    </script>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <p id="6"></p>
+    <p id="7"></p>
+    <p id="8"></p>
+    <p id="9"></p>
+    <p id="10"></p>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Przesuwanie Tablicy</title>
+</head>
+<body>
+    <h1>Przesuwanie Tablicy</h1>
+
+    <button id="przesunButton">Przesuń Tablicę</button>
+
+    <p id="wynik"></p>
+
+    <script>
+        // Funkcja do przesunięcia tablicy w prawo
+        function przesunWPrawo(tablica) {
+            const ostatniElement = tablica[tablica.length - 1];
+
+            for (let i = tablica.length - 1; i > 0; i--) {
+                tablica[i] = tablica[i - 1];
+            }
+
+            tablica[0] = ostatniElement;
+        }
+
+        // Obsługa przycisku "Przesuń Tablicę"
+        document.getElementById("przesunButton").addEventListener("click", () => {
+            // Przykładowa tablica 10-elementowa
+            const tablica = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            // Wywołanie funkcji do przesunięcia tablicy w prawo
+            przesunWPrawo(tablica);
+
+            // Wyświetlenie zaktualizowanej tablicy na stronie
+            document.getElementById("wynik").textContent = "Zaktualizowana tablica: " + tablica;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 Elementy3</title>
+</head>
+<body>
+    <script>
+        var Osoba = {
+            imie: "Anonim",
+            nazwisko: "Gal",
+            wiek: 35,
+            pokaz: function() {
+                return this.imie + " " + this.nazwisko +
+                ", wiek: " + this.wiek;
+            }
+        }
+        Osoba.imie="Jan";
+        document.write(Osoba.pokaz());
+        document.write("<br />")
+    </script>
+    
+</body>
+</html>

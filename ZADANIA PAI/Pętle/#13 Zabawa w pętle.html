@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>#13 Pętle                       </title>
+
+
+	</head>
+	<body>
+<script>
+function wypisz(){
+    if(a>0, b>0){
+    let a = document.getElementById("a").value*1;
+    let b = document.getElementById("b").value*1;
+    
+    let tekst ="";
+    for(let i=a; i<=b; i++){
+        tekst+=i+" ";
+    }
+    if(a>b){
+    for(let i=b; i<=a; i++){
+        tekst+=i+" ";
+    }
+    }
+    document.getElementById("1").innerHTML=tekst;
+}
+}
+</script>
+
+
+		
+			<header>
+              <input onclick="wypisz()" value="wypisz" type="button">
+              <p id="1"></p>
+            </header>
+
+            <input placeholder="Podaj A" type="text" id="a"></br>
+            <input placeholder="Podaj B" type="text" id="b"></br>
+	</body>
+</html>
