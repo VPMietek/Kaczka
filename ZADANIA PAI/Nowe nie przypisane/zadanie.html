@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Z Przedmiotu</title>
+</head>
+<body>
+    <form action="" method="" name="zgłoszenie">
+    <div id="daneI">
+        Podaj imię: <input type="text" id="imie"></br>
+        Podaj Nazwisko: <input  type="text" name="nazwisko"></br>
+        Podaj Klasę: <input  type="text" name="klasa"></br>
+        <input type="button" value = "Rozpocznij" onclick = "rozpocznij()"></br>
+        </div>
+        <form name="1" id="1"style="display:none" >
+			<fieldset><legend> Pytanie 1</legend>			 
+			<p>	
+				Co to jest projektowanie interfejsu użytkownika (UI)?
+			</p>
+			<input type="radio" name="pytanie" value="nie">Programowanie backendu.<br>
+			<input type="radio" name="pytanie" value="tak">Tworzenie interaktywnego i estetycznego wyglądu aplikacji.<br>
+			<input type="radio" name="pytanie" value="nie">Testowanie bezpieczeństwa.<br>
+			<input type="radio" name="pytanie" value="nie"> Zarządzanie bazą danych.
+			<input type="hidden" name="odp" value="tak"><br>			
+			<input type="button" name="button" value="OK" onclick = "sprawdzRadio('1')">
+			</fieldset>
+		</form>
+
+        <form name="2" id="2" style="display:none">
+			<fieldset><legend> Pytanie 2</legend>
+			<p> 
+				Czym różni się UX od UI w projektowaniu aplikacji?
+			</p>
+			<input type="checkbox" name="CBox" value="console" >UX to tylko kolorystyka<br>
+			<input type="checkbox" name="CBox" value="git">UX to całe doświadczenie użytkownika, UI to wygląd interfejsu.<br>
+			<input type="checkbox" name="CBox" value="uczen" >UI obejmuje tylko interakcje.<br>
+			<input type="checkbox" name="CBox" value="imie" >UX koncentruje się na programowaniu.
+			<input type="hidden" name="odp" value="git"><br>
+			<input type="button" name="button" value="OK" onclick = "sprawdzCBox('2')">
+			</fieldset>
+		</form>
+
+
+
+    <script>
+        function rozpocznij(){
+
+
+            let currentQuestion = 1;
+
+    function zmienPytanie(nastepnePytanie){
+    // Ukryj bieżące pytanie, pokaż następne pytanie
+    document.getElementById(currentQuestion.toString()).style.display = 'none';
+    document.getElementById(nastepnePytanie.toString()).style.display = 'block';
+    currentQuestion = nastepnePytanie;
+}
+
+
+    if (document.zgłoszenie.imie.value.length < 1) {
+        document.getElementById("pole1").innerHTML = "Popraw/Wpisz Imię";
+        setTimeout(function () {
+            document.getElementById("pole1").innerHTML = "";
+        }, 5000); 
+    }
+    if (document.zgłoszenie.nazwisko.value.length < 1) {
+        document.getElementById("pole2").innerHTML = "Popraw/Wpisz Nazwisko";
+        setTimeout(function () {
+            document.getElementById("pole2").innerHTML = "";
+        }, 5000);
+    }
+    if (document.zgłoszenie.klasa.value.length < 1) {
+        document.getElementById("pole3").innerHTML = "Popraw/Wpisz Klasę";
+        setTimeout(function () {
+            document.getElementById("pole3").innerHTML = "";
+        }, 5000);
+    }
+    }
+    </script>
+    <p id="pole1"></p>
+    <p id="pole2"></p>
+    <p id="pole3"></p>
+</body>
+</html>
