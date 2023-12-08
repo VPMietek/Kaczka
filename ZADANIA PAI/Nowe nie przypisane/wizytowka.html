@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizytowka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Wizytowka" class="docss">
+        <center><p>Imię I Nazwisko: Piotrek Depta</p></center>
+        <center><p>Firma: FOXBOX</p></center>
+        <center><p>Adres: Pcim</p></center>
+        <center><p>Telefon: 452-957-377</p></center>
+        <center><p>Email: piotr.krzysztof.depta@gmail.com</p></center>
+    </div>
+    <script>
+        document.getElementById('Wizytowka').addEventListener('mouseover', function() {
+            this.style.borderColor = 'red';
+        });
+
+        document.getElementById('Wizytowka').addEventListener('mouseout', function() {
+        this.style.borderColor = 'black';
+    });
+    </script>
+</body>
+</html>
